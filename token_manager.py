@@ -17,10 +17,10 @@ ZONES = ["br", "ind", "bd"]
 
 LOCAL_CONFIG_DIR = "configs"
 
-REPO_TOKENS = os.getenv("REPO_TOKENS")
-AUTH_URL = os.getenv("AUTH_URL")
+REPO_TOKENS = os.getenv("greatthug4/likeffapi")
+AUTH_URL = os.getenv("http://jwt.thug4ff.com/token")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-WEEBOOK_URL = os.getenv("WEEBOOK_URL")
+WEEBOOK_URL = os.getenv("https://discord.com/api/webhooks/1409665639777570856/8gr3hZz6QQUMKrpz9vqY0nBYGxlUQUV2LCnTRBw_Qp1IpycNgYDkd77hclmjzyyM9dIM")
 
 STALE_TOKEN_HOURS = 6      
 MAX_TOKENS = 110           
@@ -201,3 +201,4 @@ async def github_file_exists(session, filename: str) -> bool:
     url = f"https://api.github.com/repos/{REPO_TOKENS}/contents/{filename}"
     async with session.get(url, headers=HEADERS) as response:
         return response.status == 200
+
